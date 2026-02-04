@@ -1,46 +1,51 @@
-# Getting Started with Create React App
+# Radiology Patient Management Interface
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📝 Project Objective
 
-## Available Scripts
+This project is a basic patient management interface designed for a radiology diagnostics platformThe primary goal is to interact with a mock FHIR server to retrieve and display patient information using React, TypeScript, and FHIR standards5.
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+-**Patient List View**: Fetches and displays a comprehensive list of patients from the mock FHIR server. -**Patient Detail View**: Allows users to select a patient to view detailed information, including name, gender, birth date, and address. -**FHIR Integration**: Connects to the HAPI FHIR or SmartHealth IT R4 server using a dedicated FHIR client. -**Navigation**: Seamless transition between the list view and specific patient details using React Router. -**Error Handling**: Basic implementation of network request error handling with UI notifications.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🛠️ Technical Stack
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+-**Framework**: React. -**Language**: TypeScript for strong typing and interface definitions.
 
-### `npm test`
+- **UI Library**: Material UI (MUI) with a centralized theme to avoid hardcoded colors. -**FHIR Client**: `fhirclient` for standardized data fetching.
+- **Routing**: `react-router-dom` for application navigation.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ⚙️ Installation & Setup
 
-### `npm run build`
+1.  **Clone the Repository**:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    ```bash
+    git clone <your-repo-url>
+    cd radiology-interface
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2.  **Install Dependencies**:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    npm install
+    ```
 
-### `npm run eject`
+3.  **Start the Application**:
+    ```bash
+    npm start
+    ```
+    The application will run on `http://localhost:3000`.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 🏗️ Implementation Approach
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Data Fetching & FHIR
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The application uses the `fhirclient` to connect to a public R4 endpoint.It maps FHIR-specific resources (like `Patient`) to TypeScript interfaces to ensure data integrity.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Centralized Styling
 
-## Learn More
+To maintain code quality and avoid hardcoded values like #fff, a global theme is implemented via MUI's `ThemeProvider`. This allows for consistent branding (e.g., using primary colors for headers) and easy updates to the UI's look and feel.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Component Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `App.tsx`: The main entry point containing the router and theme provider. -`PatientList.tsx`: Handles the "List View" requirement, including pagination logic. -`PatientDetail.tsx`: Handles the "Detail View" for specific patient IDs. -`NotificationContext.tsx`: Manages error messaging and UI feedback.
