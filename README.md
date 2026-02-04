@@ -14,11 +14,11 @@ This project is a basic patient management interface designed for a radiology di
 
 ## 🛠️ Technical Stack
 
--**Framework**: React. 
--**Language**: TypeScript for strong typing and interface definitions.
-- **UI Library**: Material UI (MUI) with a centralized theme to avoid hardcoded colors.
-- -**FHIR Client**: `fhirclient` for standardized data fetching.
-- **Routing**: `react-router-dom` for application navigation.
+**Framework**: React. 
+**Language**: TypeScript for strong typing and interface definitions.
+**UI Library**: Material UI (MUI) with a centralized theme to avoid hardcoded colors.
+**FHIR Client**: `fhirclient` for standardized data fetching.
+**Routing**: `react-router-dom` for application navigation.
 
 ## ⚙️ Installation & Setup
 
