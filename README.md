@@ -2,17 +2,22 @@
 
 ## 📝 Project Objective
 
-This project is a basic patient management interface designed for a radiology diagnostics platformThe primary goal is to interact with a mock FHIR server to retrieve and display patient information using React, TypeScript, and FHIR standards5.
+This project is a basic patient management interface designed for a radiology diagnostics platform. The primary goal is to interact with a mock FHIR server to retrieve and display patient information using React, TypeScript, and FHIR standards5.
 
 ## 🚀 Features
 
--**Patient List View**: Fetches and displays a comprehensive list of patients from the mock FHIR server. -**Patient Detail View**: Allows users to select a patient to view detailed information, including name, gender, birth date, and address. -**FHIR Integration**: Connects to the HAPI FHIR or SmartHealth IT R4 server using a dedicated FHIR client. -**Navigation**: Seamless transition between the list view and specific patient details using React Router. -**Error Handling**: Basic implementation of network request error handling with UI notifications.
+-**Patient List View**: Fetches and displays a comprehensive list of patients from the mock FHIR server. 
+-**Patient Detail View**: Allows users to select a patient to view detailed information, including name, gender, birth date, and address. 
+-**FHIR Integration**: Connects to the HAPI FHIR or SmartHealth IT R4 server using a dedicated FHIR client. 
+-**Navigation**: Seamless transition between the list view and specific patient details using React Router. 
+-**Error Handling**: Basic implementation of network request error handling with UI notifications.
 
 ## 🛠️ Technical Stack
 
--**Framework**: React. -**Language**: TypeScript for strong typing and interface definitions.
-
-- **UI Library**: Material UI (MUI) with a centralized theme to avoid hardcoded colors. -**FHIR Client**: `fhirclient` for standardized data fetching.
+-**Framework**: React. 
+-**Language**: TypeScript for strong typing and interface definitions.
+- **UI Library**: Material UI (MUI) with a centralized theme to avoid hardcoded colors.
+- -**FHIR Client**: `fhirclient` for standardized data fetching.
 - **Routing**: `react-router-dom` for application navigation.
 
 ## ⚙️ Installation & Setup
